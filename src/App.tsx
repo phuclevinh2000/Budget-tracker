@@ -1,14 +1,7 @@
 import './App.css';
 
 function App() {
-  return (
-    <div className='App'>
-      <img
-        src={`./assets/icons/categories/categories-fast-food.png`}
-        alt='Folder Icon'
-      />
-    </div>
-  );
+  return <div className='App'>hi</div>;
 }
 
 export default App;
