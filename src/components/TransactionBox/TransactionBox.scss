@@ -1,0 +1,46 @@
+@import '../../global.scss';
+
+.pg-transaction-box {
+  .pg-transaction-box-title {
+    padding-bottom: 10px;
+  }
+
+  .pg-transaction-box-description {
+    border-top: 1px solid rgb(0 0 0 / 10%);
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+
+    .pg-transaction-box-group {
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .pg-transaction-money {
+        font-weight: 600;
+      }
+
+      span {
+        display: flex;
+        .pg-transaction-box-icon {
+          height: 25px;
+          padding: 9px;
+          border-radius: 50%;
+          background: $--theme-ui-colors-secondary;
+        }
+
+        .pg-transaction-box-info {
+          margin-left: 10px;
+          h3 {
+            font-weight: 600;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

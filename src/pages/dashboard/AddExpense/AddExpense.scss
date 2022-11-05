@@ -1,0 +1,39 @@
+@import '../../../global.scss';
+
+.pg-add-expense {
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .pg-add-expense-button {
+      position: initial !important;
+      display: flex !important;
+      width: 70% !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  }
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $--theme-ui-colors-box-background;
+  height: 70vh;
+  .pg-add-expense-button {
+    width: 50px;
+    // position: absolute;
+    // display: flex;
+    margin-left: auto;
+    margin-right: 8vw;
+    float: right;
+    background-color: $--theme-ui-colors-highlight;
+    border: none;
+    box-shadow: rgb(0 0 0) 0px 0px 0px 1px inset, rgb(0 0 0) 2px 2px 0px;
+    color: $--theme-ui-colors-mutedReverse;
+    transition: 0.3s ease-in-out all;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

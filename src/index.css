@@ -14,7 +14,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
+  background-color: #f2f1f6;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 h1,

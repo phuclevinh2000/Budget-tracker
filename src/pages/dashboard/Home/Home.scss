@@ -1,0 +1,53 @@
+@import '../../../global.scss';
+
+.pg-home-balance {
+  grid-area: balance;
+}
+.pg-home-report {
+  grid-area: report;
+}
+.pg-home-recent-transaction {
+  grid-area: transaction;
+}
+
+.pg-home {
+  @media (max-width: 992px) {
+    display: grid;
+    grid-template-areas:
+      'balance'
+      'report'
+      'transaction';
+    gap: 10px;
+  }
+
+  display: grid;
+  grid-template-areas:
+    'balance balance transaction transaction transaction transaction'
+    'balance balance transaction transaction transaction transaction'
+    'report report report report report report';
+  gap: 10px;
+
+  .pg-home-balance {
+    background-color: $--theme-ui-colors-box-background;
+    height: 30vh;
+    overflow-y: scroll;
+    border-radius: 6px;
+    padding: 15px;
+  }
+
+  .pg-home-report {
+    background-color: $--theme-ui-colors-box-background;
+    height: 30vh;
+    border-radius: 6px;
+    padding: 15px;
+    overflow-y: scroll;
+  }
+
+  .pg-home-recent-transaction {
+    background-color: $--theme-ui-colors-box-background;
+    height: 30vh;
+    border-radius: 6px;
+    padding: 15px;
+    overflow-y: scroll;
+  }
+}
