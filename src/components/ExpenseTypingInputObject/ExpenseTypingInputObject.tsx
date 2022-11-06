@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { RootState } from '../../redux/store';
+import { useSelector, useDispatch } from 'react-redux';
+import { setIsResetInput } from '../../redux/features/addExpenseSlice';
 
 import './ExpenseTypingInputObject.scss';
 
@@ -10,22 +12,31 @@ const ExpenseTypingInputObject = ({
   dataCallback,
 }: any) => {
   const dispatch = useDispatch();
-  const [note, setNote] = useState('');
+  const [input, setInput] = useState<number | string>('');
+  const isResetInput = useSelector(
+    (state: RootState) => state.addExpenseData.isResetInput
+  );
 
   const handleChange = (e: any) => {
     e.preventDefault();
-    setNote(e.target.value);
+    setInput(e.target.value);
 
     const InputData = {
-      title: title,
-      type: type,
+      label: title,
+      iconSrc: iconSrc,
       value: e.target.value,
     };
 
     dataCallback(InputData);
   };
 
-  useEffect(() => {}, [dispatch, note]);
+  useEffect(() => {
+    if (isResetInput) {
+      type === 'number' ? setInput(0) : setInput('');
+
+      dispatch(setIsResetInput(false));
+    }
+  }, [dispatch, input, isResetInput]);
 
   return (
     <div className='pg-expense-input-object'>
@@ -38,7 +49,7 @@ const ExpenseTypingInputObject = ({
         />
 
         <div className='pg-expense-input-object-data-input'>
-          <input type={type} value={note} onChange={(e) => handleChange(e)} />
+          <input type={type} value={input} onChange={(e) => handleChange(e)} />
         </div>
       </div>
     </div>

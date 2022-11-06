@@ -1,5 +1,6 @@
 export interface IncomingSingleCategory {
-  id: string;
+  id: any;
+  value: string;
   label: string;
   iconSrc: string;
 }
@@ -24,7 +25,8 @@ export interface IncomingNavbar {
 }
 
 export interface IncomingWalletOption {
-  id: string;
+  id: any;
   label: string;
   iconSrc: string;
+  value: string;
 }

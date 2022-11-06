@@ -1,20 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  wallet: null,
-  category: null,
+  expense: null,
+  isResetInput: false,
 };
 
 export const addExpenseSlice = createSlice({
-  name: 'addExpense',
+  name: 'addExpenseData',
   initialState,
   reducers: {
-    addExpenseWallet: (state, action) => {
-      state.wallet = action.payload;
+    addExpenseOption: (state, action) => {
+      state.expense = action.payload;
+    },
+    setIsResetInput: (state, action) => {
+      state.isResetInput = action.payload;
     },
   },
 });
 
-export const { addExpenseWallet } = addExpenseSlice.actions;
+export const { addExpenseOption, setIsResetInput } = addExpenseSlice.actions;
 
 export default addExpenseSlice.reducer;

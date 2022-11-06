@@ -10,6 +10,9 @@ import Dialog from '@mui/material/Dialog';
 import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import { RootState } from '../../redux/store';
+import { useSelector, useDispatch } from 'react-redux';
+import { setIsResetInput } from '../../redux/features/addExpenseSlice';
 
 export interface ConfirmationDialogRawProps {
   id: string;
@@ -71,10 +74,10 @@ function ConfirmationDialogRaw(props: ConfirmationDialogRawProps) {
         >
           {data.map((option: any) => (
             <FormControlLabel
-              value={option.label}
+              value={option.value}
               key={option.id}
               control={<Radio />}
-              label={option.label}
+              label={option.value}
             />
           ))}
         </RadioGroup>
@@ -91,13 +94,23 @@ export default function ConfirmationDialog({
   setSelectedObject,
   dataCallback,
 }: any) {
+  const dispatch = useDispatch();
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState(data[0].label);
+  const [value, setValue] = React.useState(data[0].value);
+  const isResetInput = useSelector(
+    (state: RootState) => state.addExpenseData.isResetInput
+  );
 
   React.useEffect(() => {
-    const selectedObject = data.find((object: any) => object.label === value);
+    const selectedObject = data.find((object: any) => object.value === value);
+
+    if (isResetInput === true) {
+      setValue(data[0].value);
+      dispatch(setIsResetInput(false));
+    }
+
     setSelectedObject(selectedObject);
-  }, [data, setSelectedObject, value]);
+  }, [data, dispatch, isResetInput, setSelectedObject, value]);
 
   const handleClickListItem = () => {
     setOpen(true);

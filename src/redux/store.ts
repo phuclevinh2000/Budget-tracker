@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import userReducer from './features/userSlice';
 import addExpenseReducer from './features/addExpenseSlice';
 
 export const store = configureStore({
   reducer: {
-    wallet: addExpenseReducer,
+    addExpenseData: addExpenseReducer,
   },
+  devTools: process.env.NODE_ENV !== 'production',
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
