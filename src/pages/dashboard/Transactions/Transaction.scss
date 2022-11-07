@@ -1,0 +1,15 @@
+@import '../../../global.scss';
+
+.pg-transactions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $--theme-ui-colors-box-background;
+  height: 70vh;
+  padding: 10px;
+
+  .pg-transactions-title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+  }
+}

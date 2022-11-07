@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { RootState } from '../../redux/store';
 import { useSelector, useDispatch } from 'react-redux';
-import { setIsResetInput } from '../../redux/features/addExpenseSlice';
+import { setIsResetInput } from '../../redux/features/expenseSlice';
 
 import './ExpenseTypingInputObject.scss';
+import { blockInvalidChar } from '../../utils/utils';
 
 const ExpenseTypingInputObject = ({
   title,
@@ -15,17 +16,31 @@ const ExpenseTypingInputObject = ({
   const dispatch = useDispatch();
   const [input, setInput] = useState<number | string>(initialData.value);
   const isResetInput = useSelector(
-    (state: RootState) => state.addExpenseData.isResetInput
+    (state: RootState) => state.expenseData.isResetInput
   );
 
   const handleChange = (e: any) => {
     e.preventDefault();
+
     setInput(e.target.value);
 
     const InputData = {
       label: title,
       iconSrc: iconSrc,
       value: e.target.value,
+    };
+
+    dataCallback(InputData);
+  };
+
+  const handleChangeNumber = (event: any) => {
+    const value = event.target.value;
+    const regex = /([0-9]*[\.|\,]{0,1}[0-9]{0,2})/s;
+    setInput(value.match(regex)[0]);
+    const InputData = {
+      label: title,
+      iconSrc: iconSrc,
+      value: Number(value.match(regex)[0]),
     };
 
     dataCallback(InputData);
@@ -50,7 +65,20 @@ const ExpenseTypingInputObject = ({
         />
 
         <div className='pg-expense-input-object-data-input'>
-          <input type={type} value={input} onChange={(e) => handleChange(e)} />
+          {type === 'number' ? (
+            <input
+              type='number'
+              value={input}
+              onChange={(e) => handleChangeNumber(e)}
+              onKeyDown={blockInvalidChar}
+            />
+          ) : (
+            <input
+              type={type}
+              value={input}
+              onChange={(e) => handleChange(e)}
+            />
+          )}
         </div>
       </div>
     </div>

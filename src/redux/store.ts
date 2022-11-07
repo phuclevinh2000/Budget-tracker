@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import addExpenseReducer from './features/addExpenseSlice';
+import expenseReducer from './features/expenseSlice';
 
 export const store = configureStore({
   reducer: {
-    addExpenseData: addExpenseReducer,
+    expenseData: expenseReducer,
   },
   devTools: process.env.NODE_ENV !== 'production',
 });

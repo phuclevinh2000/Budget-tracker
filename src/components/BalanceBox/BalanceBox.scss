@@ -21,6 +21,14 @@
         font-weight: 600;
       }
 
+      .pg-balance-money.minus {
+        color: $--theme-ui-colors-red;
+      }
+
+      .pg-balance-money.plus {
+        color: $--theme-ui-colors-green;
+      }
+
       span {
         display: flex;
         align-items: center;

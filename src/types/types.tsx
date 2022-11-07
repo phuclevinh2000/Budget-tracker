@@ -3,6 +3,7 @@ export interface IncomingSingleCategory {
   value: string;
   label: string;
   iconSrc: string;
+  operation: string;
 }
 
 // export interface IncomingCategories {

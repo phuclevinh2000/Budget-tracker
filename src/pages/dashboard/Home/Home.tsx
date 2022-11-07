@@ -1,6 +1,6 @@
 import './Home.scss';
 
-import { BalanceBox, TransactionBox } from '../../../components';
+import { BalanceBox, TransactionBoxHomePage } from '../../../components';
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <BalanceBox />
       </div>
       <div className='pg-home-recent-transaction'>
-        <TransactionBox />
+        <TransactionBoxHomePage />
       </div>
       <div className='pg-home-report'>report</div>
     </div>

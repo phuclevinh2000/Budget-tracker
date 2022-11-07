@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import {
   addExpenseOption,
   setIsResetInput,
-} from '../../../redux/features/addExpenseSlice';
+} from '../../../redux/features/expenseSlice';
 
 import './AddExpense.scss';
 
@@ -21,6 +21,7 @@ const AddExpense = () => {
       setIsAddedToList(true);
     } catch (error) {
       setIsAddedToList(false);
+      console.log(error);
     }
 
     setIsSaveAlertVisible(true);

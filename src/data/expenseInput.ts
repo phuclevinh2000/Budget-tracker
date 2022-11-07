@@ -1,16 +1,17 @@
 import { IncomingWalletOption } from '../types/types';
+import moment from 'moment';
 
 export const wallet: IncomingWalletOption[] = [
   {
     id: 37,
     label: 'Wallet',
-    value: 'Cash',
+    value: 'cash',
     iconSrc: './assets/icons/notifications/notifications-wallets.png',
   },
   {
     id: 38,
     label: 'Wallet',
-    value: 'Card',
+    value: 'card',
     iconSrc: './assets/icons/notifications/notifications-cards.png',
   },
 ];
@@ -24,7 +25,7 @@ export const initialSelectObject = {
 export const initialSelectWallet = {
   id: 37,
   label: 'Wallet',
-  value: 'Cash',
+  value: 'cash',
   iconSrc: './assets/icons/notifications/notifications-wallets.png',
 };
 
@@ -32,6 +33,7 @@ export const initialSelectCategory = {
   id: 1,
   label: 'Category',
   value: 'Food & Beverage',
+  operation: 'minus',
   iconSrc: './assets/icons/categories/categories-fast-food.png',
 };
 
@@ -45,7 +47,7 @@ export const initialAmountInput = {
 export const initialDateInput = {
   id: 40,
   label: 'Date',
-  value: '',
+  value: moment().format('DD/MM/YYYY'),
   iconSrc: './assets/icons/notifications/notifications-date.png',
 };
 

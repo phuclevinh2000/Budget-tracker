@@ -12,7 +12,7 @@ import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { RootState } from '../../redux/store';
 import { useSelector, useDispatch } from 'react-redux';
-import { setIsResetInput } from '../../redux/features/addExpenseSlice';
+import { setIsResetInput } from '../../redux/features/expenseSlice';
 
 export interface ConfirmationDialogRawProps {
   id: string;
@@ -98,7 +98,7 @@ export default function ConfirmationDialog({
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState(data[0].value);
   const isResetInput = useSelector(
-    (state: RootState) => state.addExpenseData.isResetInput
+    (state: RootState) => state.expenseData.isResetInput
   );
 
   React.useEffect(() => {
