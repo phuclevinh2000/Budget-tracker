@@ -3,10 +3,14 @@ import { useState } from 'react';
 import './ExpenseSelectInputObject.scss';
 
 import ConfirmationDialog from '../ConfirmationDialog/ConfirmationDialog';
-import { initialSelectObject } from '../../data';
 
-const ExpenseSelectInputObject = ({ data, title, dataCallback }: any) => {
-  const [selectedObject, setSelectedObject] = useState(initialSelectObject);
+const ExpenseSelectInputObject = ({
+  data,
+  title,
+  dataCallback,
+  initialData,
+}: any) => {
+  const [selectedObject, setSelectedObject] = useState(initialData);
 
   return (
     <div className='pg-expense-input-object'>

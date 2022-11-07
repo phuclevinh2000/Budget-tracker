@@ -47,13 +47,14 @@ const AddExpenseInputBox = ({ setExpenseData }: any) => {
   };
 
   useEffect(() => {
-    const combineData = [
-      walletData,
-      categoryData,
-      amountData,
-      dateData,
-      noteData,
-    ];
+    const combineData = {
+      wallet: walletData,
+      category: categoryData,
+      amount: amountData,
+      date: dateData,
+      note: noteData,
+    };
+
     setExpenseData(combineData);
   }, [
     amountData,
@@ -72,29 +73,34 @@ const AddExpenseInputBox = ({ setExpenseData }: any) => {
           data={wallet}
           title='Wallet'
           dataCallback={expenseWalletData}
+          initialData={initialSelectWallet}
         />
         <ExpenseSelectInputObject
           data={categories}
           title='Category'
           dataCallback={expenseCategoryData}
+          initialData={initialSelectCategory}
         />
         <ExpenseTypingInputObject
           title='Amount'
           type='number'
           iconSrc='./assets/icons/notifications/notifications-cash.png'
           dataCallback={expenseAmountData}
+          initialData={initialAmountInput}
         />
         <ExpenseTypingInputObject
           title='Date'
           type='date'
           iconSrc='./assets/icons/notifications/notifications-date.png'
           dataCallback={expenseDateData}
+          initialData={initialDateInput}
         />
         <ExpenseTypingInputObject
           title='Note'
           type='text'
           iconSrc='./assets/icons/notifications/notifications-note.png'
           dataCallback={expenseNoteData}
+          initialData={initialNoteInput}
         />
       </form>
     </div>

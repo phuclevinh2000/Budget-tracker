@@ -11,11 +11,24 @@ import { AddExpenseInputBox } from '../../../components';
 
 const AddExpense = () => {
   const dispatch = useDispatch();
-  const [expenseData, setExpenseData] = useState([]);
+  const [expenseData, setExpenseData] = useState({});
+  const [isSaveAlertVisible, setIsSaveAlertVisible] = useState(false);
+  const [isAddedToList, setIsAddedToList] = useState(false);
 
   const handleAddExpense = () => {
-    dispatch(addExpenseOption(expenseData));
+    try {
+      dispatch(addExpenseOption(expenseData));
+      setIsAddedToList(true);
+    } catch (error) {
+      setIsAddedToList(false);
+    }
+
+    setIsSaveAlertVisible(true);
     dispatch(setIsResetInput(true));
+
+    setTimeout(() => {
+      setIsSaveAlertVisible(false);
+    }, 3000);
   };
 
   return (
@@ -26,6 +39,15 @@ const AddExpense = () => {
       <button onClick={handleAddExpense} className='pg-add-expense-button'>
         Save
       </button>
+      {isSaveAlertVisible && (
+        <h1
+          className={`pg-add-expense-save ${
+            isAddedToList ? 'success' : 'error'
+          }`}
+        >
+          Save {isAddedToList ? 'successfully' : 'error'}
+        </h1>
+      )}
     </div>
   );
 };

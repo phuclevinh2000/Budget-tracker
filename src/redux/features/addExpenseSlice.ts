@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  expense: null,
+const initialState: any = {
+  expense: [],
   isResetInput: false,
 };
 
@@ -10,7 +10,7 @@ export const addExpenseSlice = createSlice({
   initialState,
   reducers: {
     addExpenseOption: (state, action) => {
-      state.expense = action.payload;
+      state.expense.push(action.payload);
     },
     setIsResetInput: (state, action) => {
       state.isResetInput = action.payload;

@@ -26,14 +26,33 @@
     margin-left: auto;
     margin-right: 8vw;
     float: right;
-    background-color: $--theme-ui-colors-highlight;
+    background-color: $--theme-ui-colors-secondary;
     border: none;
     box-shadow: rgb(0 0 0) 0px 0px 0px 1px inset, rgb(0 0 0) 2px 2px 0px;
     color: $--theme-ui-colors-mutedReverse;
     transition: 0.3s ease-in-out all;
 
     &:hover {
-      color: white;
+      color: $--theme-ui-colors-secondary;
+      background-color: $--theme-ui-colors-blue;
     }
+  }
+
+  .pg-add-expense-save {
+    width: 150px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: rgb(0 0 0) 0px 0px 0px 1px inset, rgb(0 0 0) 2px 2px 0px;
+  }
+
+  .pg-add-expense-save.success {
+    background-color: $--theme-ui-colors-green;
+  }
+
+  .pg-add-expense-save.error {
+    background-color: $--theme-ui-colors-red;
   }
 }

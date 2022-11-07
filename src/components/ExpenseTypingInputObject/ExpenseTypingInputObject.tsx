@@ -10,9 +10,10 @@ const ExpenseTypingInputObject = ({
   type,
   iconSrc,
   dataCallback,
+  initialData,
 }: any) => {
   const dispatch = useDispatch();
-  const [input, setInput] = useState<number | string>('');
+  const [input, setInput] = useState<number | string>(initialData.value);
   const isResetInput = useSelector(
     (state: RootState) => state.addExpenseData.isResetInput
   );
@@ -36,7 +37,7 @@ const ExpenseTypingInputObject = ({
 
       dispatch(setIsResetInput(false));
     }
-  }, [dispatch, input, isResetInput]);
+  }, [dispatch, input, isResetInput, type]);
 
   return (
     <div className='pg-expense-input-object'>
