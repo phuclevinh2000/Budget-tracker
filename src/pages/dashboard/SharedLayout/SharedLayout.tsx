@@ -12,12 +12,13 @@ const SharedLayout = () => {
     <section>
       <main className='dashboard'>
         <BigSidebar />
-        <SmallSidebar isShowSmallSideBar={isShowSmallSideBar} />
+
         <div>
           <Navbar
             isShowSmallSideBar={isShowSmallSideBar}
             setIsShowSmallSidebar={setIsShowSmallSidebar}
           />
+          <SmallSidebar isShowSmallSideBar={isShowSmallSideBar} />
           <div className='dashboard-page'>
             <Outlet />
           </div>

@@ -1,0 +1,14 @@
+.pg-empty-board {
+  border-top: 1px solid rgb(0 0 0 / 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+
+  .pg-empty-board-icon {
+    padding-top: 10px;
+    height: 60px;
+    width: 60px;
+  }
+}

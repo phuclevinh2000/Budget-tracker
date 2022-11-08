@@ -6,7 +6,7 @@ import { IncomingSmallSidebar } from '../../types/types';
 const SmallSidebar = ({ isShowSmallSideBar }: IncomingSmallSidebar) => {
   return (
     <div className='pg-smallsidebar-container'>
-      <div
+      {/* <div
         className={`pg-smallsidebar-content ${isShowSmallSideBar && 'active'}`}
       >
         <header>
@@ -18,7 +18,8 @@ const SmallSidebar = ({ isShowSmallSideBar }: IncomingSmallSidebar) => {
           <h1 className='pg-smallsidebar-title'>Pocket Guardian</h1>
         </header>
         <Navlinks />
-      </div>
+      </div> */}
+      <Navlinks />
     </div>
   );
 };

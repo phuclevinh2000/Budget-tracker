@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   color: $--theme-ui-colors-mutedReverse;
-  margin-top: 13px;
+  margin-top: -25px;
 
   .pg-navlinks-card {
     display: flex;
@@ -14,8 +14,8 @@
     flex-direction: column;
     margin-top: 20px;
     padding-top: 20px;
-    width: 33%;
-    height: 60px;
+    width: 80px;
+    height: 55px;
     box-shadow: rgb(0 0 0) 0px 0px 0px 2px inset, rgb(0 0 0) 3px 3px 0px;
     text-decoration: none;
     background: $--theme-ui-colors-box-background;
@@ -33,6 +33,16 @@
 
     &:hover {
       background-color: $--theme-ui-colors-hover;
+    }
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: row;
+    margin-top: 1px;
+
+    .pg-navlinks-card {
+      margin-left: 5px;
+      margin-right: 5px;
     }
   }
 }

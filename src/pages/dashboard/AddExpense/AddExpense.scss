@@ -39,12 +39,16 @@
   }
 
   .pg-add-expense-save {
-    width: 150px;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     padding: 5px;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
     box-shadow: rgb(0 0 0) 0px 0px 0px 1px inset, rgb(0 0 0) 2px 2px 0px;
   }
 

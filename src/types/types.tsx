@@ -4,6 +4,7 @@ export interface IncomingSingleCategory {
   label: string;
   iconSrc: string;
   operation: string;
+  type: string;
 }
 
 // export interface IncomingCategories {

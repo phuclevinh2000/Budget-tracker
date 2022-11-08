@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import './AddExpenseInputBox.scss';
 
@@ -48,6 +49,7 @@ const AddExpenseInputBox = ({ setExpenseData }: any) => {
 
   useEffect(() => {
     const combineData = {
+      id: uuidv4(),
       wallet: walletData,
       category: categoryData,
       amount: amountData,

@@ -11,6 +11,7 @@ section {
   @media (min-width: 992px) {
     .dashboard {
       grid-template-columns: auto 1fr;
+      // position: fixed;
     }
     .dashboard-page {
       width: 90%;

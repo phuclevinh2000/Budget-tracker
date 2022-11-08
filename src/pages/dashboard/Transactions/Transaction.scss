@@ -3,13 +3,31 @@
 .pg-transactions {
   position: relative;
   display: flex;
+  // align-items: center;
   flex-direction: column;
   background-color: $--theme-ui-colors-box-background;
   height: 70vh;
   padding: 10px;
-
+  overflow-y: scroll;
+  overflow-x: hidden;
   .pg-transactions-title {
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(0 0 0 / 10%);
+    z-index: 100;
+  }
+  .pg-transaction-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    .pg-transactions-summary-section {
+      margin: 0 20px;
+    }
+
+    .pg-transaction-report {
+      width: 100%;
+      padding: 15px;
+    }
   }
 }

@@ -6,6 +6,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Food & Beverage',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-fast-food.png',
   },
   {
@@ -13,6 +14,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Transportation',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-transpotation.png',
   },
   {
@@ -20,6 +22,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Rentals',
     operation: 'minus',
     label: 'Category',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-rental.png',
   },
   {
@@ -27,6 +30,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Water Bill',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-water-bill.png',
   },
   {
@@ -34,6 +38,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Phone Bill',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-phone-bill.png',
   },
   {
@@ -41,6 +46,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Electricity Bill',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-electricity-bill.png',
   },
   {
@@ -48,6 +54,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Gas Bill',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-gas-bill.png',
   },
   {
@@ -55,12 +62,14 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Television Bill',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-television-bill.png',
   },
   {
     id: 9,
     value: 'Internet Bill',
     label: 'Category',
+    type: 'Required Expense',
     operation: 'minus',
     iconSrc: './assets/icons/categories/categories-internet-bill.png',
   },
@@ -69,6 +78,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Other Utility Bills',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-other-bills.png',
   },
 
@@ -77,6 +87,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Home Maintenance',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-home-maintenance.png',
   },
   {
@@ -84,6 +95,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Vehicle Maintenance',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-vehicle-maintenance.png',
   },
   {
@@ -91,6 +103,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Medical Check-up',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-medical-check-up.png',
   },
   {
@@ -98,6 +111,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Insurances',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-insurances.png',
   },
   {
@@ -105,6 +119,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Education',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-education.png',
   },
   {
@@ -112,6 +127,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Houseware',
     label: 'Category',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-houseware.png',
   },
   {
@@ -119,6 +135,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Personal Items',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-personal-items.png',
   },
   {
@@ -126,6 +143,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Pets',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-pets.png',
   },
   {
@@ -133,6 +151,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Home Services',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-home-services.png',
   },
   {
@@ -140,6 +159,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Other expense',
     operation: 'minus',
+    type: 'Required Expense',
     iconSrc: './assets/icons/categories/categories-other-expense.png',
   },
 
@@ -148,6 +168,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Fitness',
     operation: 'minus',
+    type: 'Fun & Relax',
     iconSrc: './assets/icons/categories/categories-fitness.png',
   },
   {
@@ -155,11 +176,13 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Makeup',
     operation: 'minus',
+    type: 'Fun & Relax',
     iconSrc: './assets/icons/categories/categories-makeup.png',
   },
   {
     id: 23,
     label: 'Category',
+    type: 'Fun & Relax',
     value: 'Gift & Donations',
     operation: 'minus',
     iconSrc: './assets/icons/categories/categories-donation.png',
@@ -169,6 +192,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Streaming Service',
     operation: 'minus',
+    type: 'Fun & Relax',
     iconSrc: './assets/icons/categories/categories-streaming.png',
   },
   {
@@ -176,6 +200,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Fun Money',
     operation: 'minus',
+    type: 'Fun & Relax',
     iconSrc: './assets/icons/categories/categories-fun-money.png',
   },
 
@@ -184,6 +209,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Invesment',
     operation: 'minus',
+    type: 'Investing & Debt Payments',
     iconSrc: './assets/icons/categories/categories-invesment.png',
   },
   {
@@ -191,6 +217,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Debt Collection',
     label: 'Category',
     operation: 'plus',
+    type: 'Investing & Debt Payments',
     iconSrc: './assets/icons/categories/categories-debt-collection.png',
   },
   {
@@ -198,6 +225,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Debt',
     label: 'Category',
     operation: 'minus',
+    type: 'Investing & Debt Payments',
     iconSrc: './assets/icons/categories/categories-debt.png',
   },
   {
@@ -205,6 +233,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Loan',
     label: 'Category',
     operation: 'plus',
+    type: 'Investing & Debt Payments',
     iconSrc: './assets/icons/categories/categories-loan.png',
   },
   {
@@ -212,12 +241,14 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Repayment',
     label: 'Category',
     operation: 'minus',
+    type: 'Investing & Debt Payments',
     iconSrc: './assets/icons/categories/categories-repayment.png',
   },
   {
     id: 31,
     value: 'Pay Interest',
     operation: 'minus',
+    type: 'Investing & Debt Payments',
     iconSrc: './assets/icons/categories/categories-pay-interest.png',
     label: 'Category',
   },
@@ -225,6 +256,7 @@ export const categories: IncomingSingleCategory[] = [
     id: 32,
     value: 'Collect Interest',
     operation: 'plus',
+    type: 'Investing & Debt Payments',
     iconSrc: './assets/icons/categories/categories-collect-interest.png',
     label: 'Category',
   },
@@ -234,6 +266,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Salary',
     operation: 'plus',
+    type: 'Income',
     iconSrc: './assets/icons/categories/categories-salary.png',
   },
   {
@@ -241,6 +274,7 @@ export const categories: IncomingSingleCategory[] = [
     value: 'Other Income',
     label: 'Category',
     operation: 'plus',
+    type: 'Income',
     iconSrc: './assets/icons/categories/categories-other-income.png',
   },
 
@@ -249,6 +283,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Outgoing transfer',
     operation: 'minus',
+    type: 'Other',
     iconSrc: './assets/icons/categories/categories-outgoing-transfer.png',
   },
   {
@@ -256,6 +291,7 @@ export const categories: IncomingSingleCategory[] = [
     label: 'Category',
     value: 'Incoming transfer',
     operation: 'plus',
+    type: 'Other',
     iconSrc: './assets/icons/categories/categories-incoming-transfer.png',
   },
 ];

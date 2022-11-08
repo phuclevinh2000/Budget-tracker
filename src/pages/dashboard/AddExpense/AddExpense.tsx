@@ -11,17 +11,19 @@ import { AddExpenseInputBox } from '../../../components';
 
 const AddExpense = () => {
   const dispatch = useDispatch();
-  const [expenseData, setExpenseData] = useState({});
+  const [expenseData, setExpenseData] = useState<any>({});
   const [isSaveAlertVisible, setIsSaveAlertVisible] = useState(false);
   const [isAddedToList, setIsAddedToList] = useState(false);
 
   const handleAddExpense = () => {
     try {
-      dispatch(addExpenseOption(expenseData));
-      setIsAddedToList(true);
+      if (expenseData.amount.value !== 0) {
+        dispatch(addExpenseOption(expenseData));
+        setIsAddedToList(true);
+      }
     } catch (error) {
       setIsAddedToList(false);
-      console.log(error);
+      alert(error);
     }
 
     setIsSaveAlertVisible(true);
@@ -46,7 +48,10 @@ const AddExpense = () => {
             isAddedToList ? 'success' : 'error'
           }`}
         >
-          Save {isAddedToList ? 'successfully' : 'error'}
+          Save{' '}
+          {isAddedToList
+            ? 'successfully'
+            : 'error, please check your input. The "amount" input cannot be 0'}
         </h1>
       )}
     </div>

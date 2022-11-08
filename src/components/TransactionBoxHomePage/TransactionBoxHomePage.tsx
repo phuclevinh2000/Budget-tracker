@@ -1,8 +1,9 @@
 import { RootState } from '../../redux/store';
+import { useSelector } from 'react-redux';
 
 import './TransactionBoxHomePage.scss';
 
-import { useSelector } from 'react-redux';
+import EmptyBoard from '../EmptyBoard/EmptyBoard';
 
 const TransactionBoxHomePage = () => {
   const myExpenses = useSelector(
@@ -14,31 +15,38 @@ const TransactionBoxHomePage = () => {
       <div className='pg-transaction-box-home-title'>
         Last five transactions
       </div>
-      <div className='pg-transaction-box-home-description'>
-        {myExpenses
-          .slice(-5)
-          .reverse()
-          .map((singleTransaction: any) => (
-            <div className='pg-transaction-box-home-group'>
-              <span>
-                <img
-                  src={singleTransaction.category.iconSrc}
-                  alt='wallet'
-                  className='pg-transaction-box-home-icon'
-                />
-                <div className='pg-transaction-box-home-info'>
-                  <h3>{singleTransaction.category.value}</h3>
-                  <p>{singleTransaction.date.value}</p>
-                </div>
-              </span>
-              <p
-                className={`pg-transaction-box-home-money ${singleTransaction.category.operation}`}
+      {myExpenses.length > 0 ? (
+        <div className='pg-transaction-box-home-description'>
+          {myExpenses
+            .slice(-5)
+            .reverse()
+            .map((singleTransaction: any) => (
+              <div
+                key={singleTransaction.id}
+                className='pg-transaction-box-home-group'
               >
-                {singleTransaction.amount.value} $
-              </p>
-            </div>
-          ))}
-      </div>
+                <span>
+                  <img
+                    src={singleTransaction.category.iconSrc}
+                    alt='wallet'
+                    className='pg-transaction-box-home-icon'
+                  />
+                  <div className='pg-transaction-box-home-info'>
+                    <h3>{singleTransaction.category.value}</h3>
+                    <p>{singleTransaction.date.value}</p>
+                  </div>
+                </span>
+                <p
+                  className={`pg-transaction-box-home-money ${singleTransaction.category.operation}`}
+                >
+                  {singleTransaction.amount.value} $
+                </p>
+              </div>
+            ))}
+        </div>
+      ) : (
+        <EmptyBoard />
+      )}
     </div>
   );
 };

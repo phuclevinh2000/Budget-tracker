@@ -34,6 +34,7 @@ export const initialSelectCategory = {
   label: 'Category',
   value: 'Food & Beverage',
   operation: 'minus',
+  type: 'Required Expense',
   iconSrc: './assets/icons/categories/categories-fast-food.png',
 };
 
@@ -47,7 +48,7 @@ export const initialAmountInput = {
 export const initialDateInput = {
   id: 40,
   label: 'Date',
-  value: moment().format('DD/MM/YYYY'),
+  value: moment().format('DD-MM-YYYY'),
   iconSrc: './assets/icons/notifications/notifications-date.png',
 };
 
