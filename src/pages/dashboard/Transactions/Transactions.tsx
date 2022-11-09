@@ -1,8 +1,8 @@
 import './Transaction.scss';
 
 import {
-  TransactionExpenseReport,
-  TransactionSummaryBox,
+  TransactionViewExpenseReport,
+  TransactionViewSummaryBox,
 } from '../../../components';
 
 const Transactions = () => {
@@ -11,10 +11,10 @@ const Transactions = () => {
       <div className='pg-transactions-title'>Total Transactions</div>
       <div className='pg-transaction-data'>
         <div className='pg-transactions-summary-section'>
-          <TransactionSummaryBox />
+          <TransactionViewSummaryBox />
         </div>
         <div className='pg-transaction-report'>
-          <TransactionExpenseReport />
+          <TransactionViewExpenseReport />
         </div>
       </div>
     </div>

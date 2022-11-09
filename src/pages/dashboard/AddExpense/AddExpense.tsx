@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import {
   addExpenseOption,
   setIsResetInput,
@@ -7,19 +8,35 @@ import {
 
 import './AddExpense.scss';
 
-import { AddExpenseInputBox } from '../../../components';
+import {
+  initialSelectWallet,
+  initialSelectCategory,
+  initialAmountInput,
+  initialDateInput,
+  initialNoteInput,
+} from '../../../data';
+import { AddExpenseViewInputBox } from '../../../components';
 
 const AddExpense = () => {
   const dispatch = useDispatch();
   const [expenseData, setExpenseData] = useState<any>({});
-  const [isSaveAlertVisible, setIsSaveAlertVisible] = useState(false);
-  const [isAddedToList, setIsAddedToList] = useState(false);
+  const [isSaveAlertVisible, setIsSaveAlertVisible] = useState<boolean>(false);
+  const [isAddedToList, setIsAddedToList] = useState<boolean>(false);
 
   const handleAddExpense = () => {
     try {
       if (expenseData.amount.value !== 0) {
+        const resetData = {
+          id: uuidv4(),
+          wallet: initialSelectWallet,
+          category: initialSelectCategory,
+          amount: initialAmountInput,
+          date: initialDateInput,
+          note: initialNoteInput,
+        };
         dispatch(addExpenseOption(expenseData));
         setIsAddedToList(true);
+        setExpenseData(resetData);
       }
     } catch (error) {
       setIsAddedToList(false);
@@ -31,13 +48,14 @@ const AddExpense = () => {
 
     setTimeout(() => {
       setIsSaveAlertVisible(false);
-    }, 3000);
+      setIsAddedToList(false);
+    }, 2000);
   };
 
   return (
     <div className='pg-add-expense'>
       <div className='pg-add-expense-box'>
-        <AddExpenseInputBox setExpenseData={setExpenseData} />
+        <AddExpenseViewInputBox setExpenseData={setExpenseData} />
       </div>
       <button onClick={handleAddExpense} className='pg-add-expense-button'>
         Save

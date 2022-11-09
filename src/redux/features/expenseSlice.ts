@@ -1,14 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { IncomingExpenseSliceInitialState } from '../../types/types';
 
-const initialState: any = {
-  expense: [],
-  isResetInput: false,
-  wallet: {
-    cash: 0,
-    card: 0,
-  },
-  graphData: [],
-};
+const expenseData =
+  (localStorage.getItem('expenseData') || '{}') === '{}'
+    ? {
+        expense: [],
+        isResetInput: false,
+      }
+    : JSON.parse(localStorage.getItem('expenseData')!);
+
+const initialState: IncomingExpenseSliceInitialState = expenseData;
+console.log(expenseData);
 
 export const expenseSlice = createSlice({
   name: 'expenseData',
@@ -17,31 +19,23 @@ export const expenseSlice = createSlice({
     addExpenseOption: (state, action) => {
       state.expense.push(action.payload);
 
-      // Check if the user select cash or card
-      const typeOfWallet = action.payload.wallet.value;
-      const typeOfExpense = action.payload.category.operation;
-
-      if (typeOfWallet === 'cash' && typeOfExpense === 'plus') {
-        state.wallet.cash += action.payload.amount.value;
-      } else if (typeOfWallet === 'cash' && typeOfExpense === 'minus') {
-        state.wallet.cash -= action.payload.amount.value;
-      } else if (typeOfWallet === 'card' && typeOfExpense === 'plus') {
-        state.wallet.card += action.payload.amount.value;
-      } else {
-        state.wallet.card -= action.payload.amount.value;
-      }
+      localStorage.setItem('expenseData', JSON.stringify(state));
     },
     setIsResetInput: (state, action) => {
       state.isResetInput = action.payload;
     },
 
-    addGraphData: (state, action) => {
-      state.graphData.push(action.payload);
+    deleteExpenseOption: (state, action) => {
+      // Filter the options
+      const filteredExpense = state.expense.filter(
+        (option: any) => option.id !== action.payload
+      );
+      state.expense = filteredExpense;
     },
   },
 });
 
-export const { addExpenseOption, setIsResetInput, addGraphData } =
+export const { addExpenseOption, setIsResetInput, deleteExpenseOption } =
   expenseSlice.actions;
 
 export default expenseSlice.reducer;

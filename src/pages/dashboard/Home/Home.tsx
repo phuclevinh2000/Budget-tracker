@@ -1,22 +1,22 @@
 import './Home.scss';
 
 import {
-  BalanceBox,
-  HomeReport,
-  TransactionBoxHomePage,
+  HomeViewBalanceBox,
+  HomeViewReportGraph,
+  HomeViewTransactionBox,
 } from '../../../components';
 
 const Home = () => {
   return (
     <div className='pg-home'>
       <div className='pg-home-balance'>
-        <BalanceBox />
+        <HomeViewBalanceBox />
       </div>
       <div className='pg-home-recent-transaction'>
-        <TransactionBoxHomePage />
+        <HomeViewTransactionBox />
       </div>
       <div className='pg-home-report'>
-        <HomeReport />
+        <HomeViewReportGraph />
       </div>
     </div>
   );

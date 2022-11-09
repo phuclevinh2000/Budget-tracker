@@ -1,0 +1,15 @@
+@import '../../../global.scss';
+
+.pg-smallsidebar-container {
+  @media (min-width: 992px) {
+    display: none;
+  }
+
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  opacity: 1;
+  transition: $--theme-ui-transition-time;
+}

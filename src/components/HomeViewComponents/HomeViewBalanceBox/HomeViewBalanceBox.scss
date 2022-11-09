@@ -1,0 +1,49 @@
+@import '../../../global.scss';
+
+.pg-balance-box {
+  .pg-balance-box-title {
+    padding-bottom: 10px;
+  }
+
+  .pg-balance-box-description {
+    border-top: 1px solid rgb(0 0 0 / 10%);
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    flex-direction: column;
+    .pg-balance-box-group {
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .pg-balance-money {
+        font-weight: 600;
+      }
+
+      .pg-balance-money.minus {
+        color: $--theme-ui-colors-red;
+      }
+
+      .pg-balance-money.plus {
+        color: $--theme-ui-colors-green;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+
+        .pg-balance-box-icon {
+          height: 25px;
+          padding: 9px;
+          border-radius: 50%;
+          background: $--theme-ui-colors-secondary;
+        }
+
+        p {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

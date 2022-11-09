@@ -1,0 +1,103 @@
+@import '../../../global.scss';
+
+.pg-connect-tool {
+  .pg-connect-tool-github,
+  .pg-connect-tool-linkedln,
+  .pg-connect-tool-facebook,
+  .pg-connect-tool-code {
+    position: absolute;
+    color: inherit;
+    bottom: 40px;
+    right: 15px;
+    border-radius: 50%;
+    background-color: $--theme-ui-colors-highlight;
+    box-shadow: $--theme-ui-colors-mutedReverse;
+    border: 2px solid $--theme-ui-colors-mutedReverse;
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.5s;
+    color: $--theme-ui-colors-mutedReverse;
+  }
+  .pg-connect-tool-github.active {
+    position: absolute;
+    right: 105px;
+    bottom: 27px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $--theme-ui-colors-highlight;
+    padding: 4px;
+    border: 2px solid $--theme-ui-colors-mutedReverse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .pg-connect-tool-linkedln.active {
+    position: absolute;
+    right: 80px;
+    bottom: 65px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $--theme-ui-colors-highlight;
+    padding: 7px;
+    border: 2px solid $--theme-ui-colors-mutedReverse;
+    cursor: pointer;
+    z-index: 100;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .pg-connect-tool-facebook.active {
+    position: absolute;
+    right: 45px;
+    bottom: 95px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $--theme-ui-colors-highlight;
+    padding: 7px;
+    border: 2px solid $--theme-ui-colors-mutedReverse;
+    cursor: pointer;
+    z-index: 100;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .pg-connect-tool-code.active {
+    position: absolute;
+    right: 3px;
+    bottom: 115px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $--theme-ui-colors-highlight;
+    padding: 7px;
+    border: 2px solid $--theme-ui-colors-mutedReverse;
+    cursor: pointer;
+    z-index: 100;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.pg-connect {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: $--theme-ui-colors-highlight;
+  box-shadow: grey 0px 0px 0px 0.5px inset;
+  border: 2px solid $--theme-ui-colors-mutedReverse;
+  cursor: pointer;
+  z-index: 100;
+}

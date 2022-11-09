@@ -6,9 +6,10 @@ import {
   SharedLayout,
   Home,
   Transactions,
-  Budget,
+  FutureIdea,
   AddExpense,
 } from './pages/dashboard';
+import { ConnectTool } from './components';
 import { Error } from './pages';
 
 function App() {
@@ -19,12 +20,11 @@ function App() {
           <Route index element={<Home />} />
           <Route path='transactions' element={<Transactions />} />
           <Route path='add' element={<AddExpense />} />
-          <Route path='budgets' element={<Budget />} />
+          <Route path='future' element={<FutureIdea />} />
         </Route>
-        {/* <Route path='/register' element={<Register />} />
-        <Route path='/landing' element={<Landing />} /> */}
         <Route path='*' element={<Error />} />
       </Routes>
+      <ConnectTool />
     </BrowserRouter>
   );
 }

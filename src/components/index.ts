@@ -1,37 +1,37 @@
-import BigSidebar from './BigSidebar/BigSidebar';
-import Navbar from './Navbar/Navbar';
-import SmallSidebar from './SmallSidebar/SmallSidebar';
-import BalanceBox from './BalanceBox/BalanceBox';
-import TransactionBoxHomePage from './TransactionBoxHomePage/TransactionBoxHomePage';
-import ReportBox from './ReportBox/ReportBox';
-import AddExpenseInputBox from './AddExpenseInputBox/AddExpenseInputBox';
-import ExpenseSelectInputObject from './ExpenseSelectInputObject/ExpenseSelectInputObject';
-import ConfirmationDialog from './ConfirmationDialog/ConfirmationDialog';
-import ExpenseTypingInputObject from './ExpenseTypingInputObject/ExpenseTypingInputObject';
-import TransactionSummaryBox from './TransactionsSummaryBox/TransactionSummaryBox';
-import EmptyBoard from './EmptyBoard/EmptyBoard';
-import TransactionExpenseReport from './TransactionExpenseReport/TransactionExpenseReport';
-import ExpenseReportModal from './ExpenseReportModal/ExpenseReportModal';
-import ConfirmDeleteDialog from './ConfirmDeleteDialog/ConfirmDeleteDialog';
-import ExpenseTransactionReportGroup from './ExpenseTransactionReportGroup/ExpenseTransactionReportGroup';
-import HomeReport from './HomeReport/HomeReport';
+import BigSidebar from './CommonComponents/BigSidebar/BigSidebar';
+import Navbar from './CommonComponents/Navbar/Navbar';
+import SmallSidebar from './CommonComponents/SmallSidebar/SmallSidebar';
+import HomeViewBalanceBox from './HomeViewComponents/HomeViewBalanceBox/HomeViewBalanceBox';
+import HomeViewTransactionBox from './HomeViewComponents/HomeViewTransactionBox/HomeViewTransactionBox';
+import AddExpenseViewInputBox from './AddExpenseViewComponents/AddExpenseViewInputBox/AddExpenseViewInputBox';
+import AddExpenseViewSelectInput from './AddExpenseViewComponents/AddExpenseViewSelectInput/AddExpenseViewSelectInput';
+import AddExpenseViewSelectOptionsDialog from './AddExpenseViewComponents/AddExpenseViewSelectOptionsDialog/AddExpenseViewSelectOptionsDialog';
+import AddExpenseViewTypingInput from './AddExpenseViewComponents/AddExpenseViewTypingInput/AddExpenseViewTypingInput';
+import TransactionViewSummaryBox from './TransactionViewComponents/TransactionViewSummaryBox/TransactionViewSummaryBox';
+import EmptyBoard from './CommonComponents/EmptyBoard/EmptyBoard';
+import TransactionViewExpenseReport from './TransactionViewComponents/TransactionViewExpenseReport/TransactionViewExpenseReport';
+import TransactionViewDetailReportModal from './TransactionViewComponents/TransactionViewDetailReportModal/TransactionViewDetailReportModal';
+import ConfirmDeleteDialog from './CommonComponents/ConfirmDeleteDialog/ConfirmDeleteDialog';
+import TransactionViewDetailReport from './TransactionViewComponents/TransactionViewDetailReport/TransactionViewDetailReport';
+import HomeViewReportGraph from './HomeViewComponents/HomeViewReportGraph/HomeViewReportGraph';
+import ConnectTool from './CommonComponents/ConnectTool/ConnectTool';
 
 export {
   BigSidebar,
   Navbar,
   SmallSidebar,
-  BalanceBox,
-  TransactionBoxHomePage,
-  ReportBox,
-  AddExpenseInputBox,
-  ExpenseSelectInputObject,
-  ConfirmationDialog,
-  ExpenseTypingInputObject,
-  TransactionSummaryBox,
+  HomeViewBalanceBox,
+  HomeViewTransactionBox,
+  AddExpenseViewInputBox,
+  AddExpenseViewSelectInput,
+  AddExpenseViewSelectOptionsDialog,
+  AddExpenseViewTypingInput,
+  TransactionViewSummaryBox,
   EmptyBoard,
-  TransactionExpenseReport,
-  ExpenseReportModal,
-  ExpenseTransactionReportGroup,
+  TransactionViewExpenseReport,
+  TransactionViewDetailReportModal,
+  TransactionViewDetailReport,
   ConfirmDeleteDialog,
-  HomeReport,
+  HomeViewReportGraph,
+  ConnectTool,
 };
