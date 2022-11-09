@@ -50,9 +50,7 @@ const HomeViewReportGraph = () => {
 
   return (
     <div className='pg-home-report-component'>
-      <p className='pg-home-report-component-title'>
-        Last three transactions graph
-      </p>
+      <p className='pg-home-report-component-title'>Income and Outcome graph</p>
       {lastFiveExpense.length > 0 ? (
         <ResponsiveContainer width='100%' height={110}>
           <BarChart data={dataForGraph}>
