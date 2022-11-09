@@ -6,7 +6,7 @@ const FutureIdea = () => {
       <p>Need to think and will be added later:</p>
       <ul>
         {listThingsNeedToBeDoneInTheFuture.map((list: string) => (
-          <li>- {list}</li>
+          <li key={list}>- {list}</li>
         ))}
       </ul>
     </div>
