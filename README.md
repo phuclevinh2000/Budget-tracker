@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# What is this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is the Budget tracker application.
 
-## Available Scripts
 
-In the project directory, you can run:
+# ABOUT THE IMPLEMENTATION
 
-### `npm start`
+NOTE: The most and common feature was there for release phase one, need to work more for release phase 2
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Image
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![image](https://user-images.githubusercontent.com/47014132/200964823-3102f485-c8d4-4cbd-9818-c7345724a13c.png)
+![image](https://user-images.githubusercontent.com/47014132/200965196-a8424ddf-1ffc-4c65-bb09-709ed0a084cc.png)
+![image](https://user-images.githubusercontent.com/47014132/200964978-bce439de-8431-4cbe-a9e1-07a3a3263f5c.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Demo
 
-### `npm run build`
+[Demo](budget-tracker-pearl.vercel.app)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to build and run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Install NodeJs and npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Download and install Node.js from this link https://nodejs.org/en/download/
 
-### `npm run eject`
+### 2. Clone or download this repo.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+On your terminal or cmd, type: `git clone git@github.com:phuclevinh2000/Budget-tracker.git`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+. On your command line, navigate to root folder and install: `npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 3. Deploy the application
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+. Deploy the app on web-browsers: `npm start`
 
-## Learn More
+### Technology use in the application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+. React
+. Redux Tool Kit
+. React-router-dom
+. sass
+. hamburger-react
+. moment
+. material UI
+. recharts
+. uuid
+. TypeScript
