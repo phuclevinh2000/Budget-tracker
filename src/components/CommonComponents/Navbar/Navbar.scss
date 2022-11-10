@@ -29,8 +29,15 @@
       }
 
       .pg-navbar-total-calculate {
+        display: flex;
+        align-items: center;
         font-size: 15px;
         font-weight: 600;
+
+        .pg-navbar-total-calculate-see-icon {
+          margin-left: 5px;
+          height: 15px;
+        }
       }
     }
   }

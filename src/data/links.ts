@@ -28,4 +28,5 @@ export const listThingsNeedToBeDoneInTheFuture: string[] = [
   'Search',
   'Localization',
   'More meaning full data display',
+  'Dark mode',
 ];

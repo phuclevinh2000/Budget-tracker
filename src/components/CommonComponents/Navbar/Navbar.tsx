@@ -1,11 +1,13 @@
 import { RootState } from '../../../redux/store';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 import './Navbar.scss';
 
 import { IncomingExpense } from '../../../types/types';
 
 const Navbar = () => {
+  const [hideTotal, setHideTotal] = useState(false);
   const myExpenses = useSelector(
     (state: RootState) => state.expenseData.expense
   );
@@ -39,7 +41,15 @@ const Navbar = () => {
         <div className='pg-navbar-total'>
           <p className='pg-navbar-total-title'>Total</p>
           <p className='pg-navbar-total-calculate'>
-            {inflowSum - outflowSum} $
+            {hideTotal ? '****' : `${inflowSum - outflowSum} $`}
+            <img
+              className='pg-navbar-total-calculate-see-icon'
+              src={`./assets/icons/notifications/notifications-${
+                hideTotal ? 'hidden' : 'see'
+              }.png`}
+              alt='global'
+              onClick={() => setHideTotal(!hideTotal)}
+            />
           </p>
         </div>
       </div>
