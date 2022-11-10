@@ -14,6 +14,7 @@ const TransactionViewExpenseReport = () => {
 
   return (
     <div className='pg-transaction-expense-report'>
+      <p className='pg-transaction-expense-report-title'>Expense Report</p>
       {myExpenses.length > 0 ? (
         myExpenses
           .slice()

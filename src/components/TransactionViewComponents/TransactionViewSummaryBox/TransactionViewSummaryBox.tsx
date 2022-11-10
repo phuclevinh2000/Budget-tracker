@@ -61,14 +61,18 @@ const TransactionViewSummaryBox = () => {
       <div className='pg-transaction-summary-box-sum'>
         <div className='pg-transaction-summary-box-flow'>
           <p>Inflow</p>
-          <p className='pg-transaction-summary-box-inflow'>{inflowSum} $</p>
+          <p className='pg-transaction-summary-box-inflow'>
+            {inflowSum.toFixed(2)} $
+          </p>
         </div>
         <div className='pg-transaction-summary-box-flow'>
           <p>Outflow</p>
-          <p className='pg-transaction-summary-box-outflow'>-{outflowSum} $</p>
+          <p className='pg-transaction-summary-box-outflow'>
+            -{outflowSum.toFixed(2)} $
+          </p>
         </div>
         <div className='pg-transaction-summary-box-total'>
-          {inflowSum - outflowSum} $
+          {(inflowSum - outflowSum).toFixed(2)} $
         </div>
       </div>
     </div>

@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className='pg-navbar-total'>
           <p className='pg-navbar-total-title'>Total</p>
           <p className='pg-navbar-total-calculate'>
-            {hideTotal ? '****' : `${inflowSum - outflowSum} $`}
+            {hideTotal ? '****' : `${(inflowSum - outflowSum).toFixed(2)} $`}
             <img
               className='pg-navbar-total-calculate-see-icon'
               src={`./assets/icons/notifications/notifications-${

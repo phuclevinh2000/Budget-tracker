@@ -70,6 +70,7 @@ const AddExpenseViewTypingInput = ({
         <div className='pg-expense-input-object-data-input'>
           {type === 'number' ? (
             <input
+              min={0}
               type='number'
               value={input}
               onChange={(e) => handleChangeNumber(e)}

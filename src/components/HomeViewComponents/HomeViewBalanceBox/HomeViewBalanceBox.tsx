@@ -54,7 +54,7 @@ const HomeViewBalanceBox = () => {
               totalCashExpense <= 0 ? 'minus' : 'plus'
             }`}
           >
-            {totalCashExpense} $
+            {totalCashExpense.toFixed(2)} $
           </p>
         </div>
         <div className='pg-balance-box-group'>
@@ -71,7 +71,7 @@ const HomeViewBalanceBox = () => {
               totalCardExpense <= 0 ? 'minus' : 'plus'
             }`}
           >
-            {totalCardExpense} $
+            {totalCardExpense.toFixed(2)} $
           </p>
         </div>
       </div>

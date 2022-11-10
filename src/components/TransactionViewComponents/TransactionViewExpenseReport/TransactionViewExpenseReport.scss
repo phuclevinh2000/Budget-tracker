@@ -1,4 +1,9 @@
 .pg-transaction-expense-report {
   box-shadow: rgb(0 0 0) 0px 0px 0px 2px inset, rgb(0 0 0) 3px 3px 0px;
   margin: 0 20px;
+
+  .pg-transaction-expense-report-title {
+    padding: 15px;
+    border-bottom: 2px solid rgb(0 0 0 / 10%);
+  }
 }
