@@ -20,7 +20,7 @@ function App() {
     (state: RootState) => state.settingData.darkMode
   );
   return (
-    <div className={darkMode && 'dark'}>
+    <div className={darkMode ? 'dark' : 'light'}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<SharedLayout />}>
