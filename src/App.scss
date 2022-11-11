@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.dark {
+  background-color: rgb(51, 49, 49);
+  color: rgb(124, 120, 120) !important;
+
+  h1 {
+    color: rgb(124, 120, 120) !important;
+  }
+
+  aside {
+    box-shadow: 2px 0px 0px 0px rgb(211, 207, 207);
+  }
+
+  .pg-navbar {
+    box-shadow: 2px 1px 0px 0px rgb(211, 207, 207);
+  }
+}

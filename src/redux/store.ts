@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import expenseReducer from './features/expenseSlice';
+import settingReducer from './features/settingSlice';
 
 export const store = configureStore({
   reducer: {
     expenseData: expenseReducer,
+    settingData: settingReducer,
   },
   devTools: process.env.NODE_ENV !== 'production',
 });

@@ -10,7 +10,6 @@ const expenseData =
     : JSON.parse(localStorage.getItem('expenseData')!);
 
 const initialState: IncomingExpenseSliceInitialState = expenseData;
-console.log(expenseData);
 
 export const expenseSlice = createSlice({
   name: 'expenseData',

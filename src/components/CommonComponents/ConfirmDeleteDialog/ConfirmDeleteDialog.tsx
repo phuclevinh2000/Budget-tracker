@@ -15,7 +15,6 @@ const ConfirmDeleteDialog = ({ setDeleteConfirmation, transactionId }: any) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
     dispatch(deleteExpenseOption(transactionId));
-    console.log('handle delete');
     setDeleteConfirmation(false);
   };
   return (
@@ -36,7 +35,7 @@ const ConfirmDeleteDialog = ({ setDeleteConfirmation, transactionId }: any) => {
           Cancel
         </Button>
         <Button
-          color='secondary'
+          color='error'
           variant='contained'
           onClick={() => {
             handleDelete();

@@ -1,0 +1,22 @@
+@import '../../../global.scss';
+
+.pg-setting-view-board {
+  .pg-setting-view-board-title {
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(0 0 0 / 10%);
+  }
+
+  .pg-setting-view-board-content {
+    margin: auto;
+
+    .pg-setting-view-option {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 0;
+      border: 1px solid rgb(0 0 0 / 10%);
+      box-shadow: rgb(0 0 0) 0px 0px 0px 2px inset, rgb(0 0 0) 2px 2px 0px;
+    }
+  }
+}

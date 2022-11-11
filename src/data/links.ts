@@ -12,6 +12,12 @@ export const links: IncomingLinks[] = [
   { id: uuidv4(), text: 'add', path: 'add', iconSrc: 'button-add-new.png' },
   {
     id: uuidv4(),
+    text: 'setting',
+    path: 'setting',
+    iconSrc: 'button-setting.png',
+  },
+  {
+    id: uuidv4(),
     text: 'future',
     path: 'future',
     iconSrc: 'button-planning.png',
