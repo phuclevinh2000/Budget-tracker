@@ -16,12 +16,12 @@ export const links: IncomingLinks[] = [
     path: 'setting',
     iconSrc: 'button-setting.png',
   },
-  {
-    id: uuidv4(),
-    text: 'future',
-    path: 'future',
-    iconSrc: 'button-planning.png',
-  },
+  // {
+  //   id: uuidv4(),
+  //   text: 'future',
+  //   path: 'future',
+  //   iconSrc: 'button-planning.png',
+  // },
 ];
 
 export const listThingsNeedToBeDoneInTheFuture: string[] = [

@@ -12,16 +12,11 @@ const SettingViewBoard = () => {
     useSelector((state: RootState) => state.settingData.darkMode)
   );
   const dispatch = useDispatch();
-  const darkMode = useSelector(
-    (state: RootState) => state.settingData.darkMode
-  );
 
   const handleToggleButtonCLick = () => {
     setIsDarkMode(!isdarkMode);
     dispatch(toggleDarkMode(!isdarkMode));
   };
-
-  console.log(darkMode);
 
   return (
     <div className='pg-setting-view-board'>

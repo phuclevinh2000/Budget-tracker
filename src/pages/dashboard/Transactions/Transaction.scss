@@ -17,11 +17,13 @@
   }
   .pg-transaction-data {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
     width: 100%;
 
     .pg-transactions-summary-section {
+      width: 80%;
       margin: 0 20px;
     }
 
