@@ -64,7 +64,7 @@ export default function DarkLightModeSwitchButton({
           <MaterialUISwitch
             onChange={handleToggleButtonCLick}
             sx={{ m: 1 }}
-            defaultChecked={isdarkMode}
+            checked={isdarkMode}
           />
         }
         label={isdarkMode ? 'Dark' : 'Light'}
