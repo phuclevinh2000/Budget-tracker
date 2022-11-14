@@ -46,7 +46,7 @@ export const initialAmountInput: IncomingExpenseOptionData = {
 export const initialDateInput: IncomingExpenseOptionData = {
   id: 40,
   label: 'Date',
-  value: moment().format('DD-MM-YYYY'),
+  value: moment().format('YYYY-MM-DD'),
   iconSrc: './assets/icons/notifications/notifications-date.png',
 };
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import moment from 'moment';
 import { RootState } from '../../../redux/store';
 import { useSelector, useDispatch } from 'react-redux';
 import { setIsResetInput } from '../../../redux/features/expenseSlice';
@@ -51,7 +52,11 @@ const AddExpenseViewTypingInput = ({
 
   useEffect(() => {
     if (isResetInput) {
-      type === 'number' ? setInput(0) : setInput('');
+      type === 'number'
+        ? setInput(0)
+        : type === 'date'
+        ? setInput(moment().format('YYYY-MM-DD'))
+        : setInput('');
 
       dispatch(setIsResetInput(false));
     }
