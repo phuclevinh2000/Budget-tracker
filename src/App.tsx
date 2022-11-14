@@ -17,7 +17,7 @@ import { Error } from './pages';
 
 function App() {
   const darkMode = useSelector(
-    (state: RootState) => state.settingData.darkMode
+    (state: RootState) => state.expenseData.darkMode
   );
   return (
     <div className={darkMode ? 'dark' : 'light'}>

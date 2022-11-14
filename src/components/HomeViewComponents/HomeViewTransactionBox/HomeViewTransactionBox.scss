@@ -20,6 +20,10 @@
 
       .pg-transaction-box-home-money {
         font-weight: 600;
+
+        .pg-transaction-box-money-icon {
+          height: 12px;
+        }
       }
 
       .pg-transaction-box-home-money.minus {

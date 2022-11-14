@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import moment from 'moment';
+import { RootState } from '../../../redux/store';
+import { useSelector } from 'react-redux';
 
 import './TransactionViewDetailReportModal.scss';
 import Box from '@mui/material/Box';
@@ -26,6 +28,9 @@ const TransactionViewDetailReportModal = ({
   setOpen,
 }: any) => {
   const [deleteConfirmation, setDeleteConfirmation] = useState(false);
+  const currencyIconSrc = useSelector(
+    (state: RootState) => state.expenseData.currency.iconSrc
+  );
   const handleClose = () => {
     setOpen(false);
   };
@@ -83,7 +88,12 @@ const TransactionViewDetailReportModal = ({
                   className={`pg-modal-body-money ${singleTransaction.category.operation}`}
                 >
                   {singleTransaction.category.operation === 'minus' ? '-' : ''}
-                  {singleTransaction.amount.value} $
+                  {singleTransaction.amount.value}{' '}
+                  <img
+                    src={currencyIconSrc}
+                    alt='currency'
+                    className='pg-modal-body-money-icon'
+                  />
                 </div>
               </div>
             </div>

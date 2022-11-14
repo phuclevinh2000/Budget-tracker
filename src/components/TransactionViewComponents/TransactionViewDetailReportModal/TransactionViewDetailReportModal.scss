@@ -66,6 +66,13 @@
         font-size: 20px;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
+
+        .pg-modal-body-money-icon {
+          margin-top: 3px;
+          margin-left: 2px;
+          height: 12px;
+        }
       }
 
       .pg-modal-body-money.minus {

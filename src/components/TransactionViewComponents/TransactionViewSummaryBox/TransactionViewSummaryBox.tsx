@@ -11,6 +11,10 @@ const TransactionViewSummaryBox = () => {
     (state: RootState) => state.expenseData.expense
   );
 
+  const currencyIconSrc = useSelector(
+    (state: RootState) => state.expenseData.currency.iconSrc
+  );
+
   const inflowExpense = myExpenses.filter(
     (expense: IncomingExpense) => expense.category.operation === 'plus'
   );
@@ -51,7 +55,14 @@ const TransactionViewSummaryBox = () => {
               className='pg-transaction-summary-box-top-expense-item'
             >
               <p>{expense.category.value}</p>
-              <p>{expense.amount.value} $</p>
+              <p>
+                {expense.amount.value}{' '}
+                <img
+                  src={currencyIconSrc}
+                  alt='currency'
+                  className='pg-transaction-summary-box-money-icon'
+                />
+              </p>
             </div>
           ))
         ) : (
@@ -62,17 +73,32 @@ const TransactionViewSummaryBox = () => {
         <div className='pg-transaction-summary-box-flow'>
           <p>Inflow</p>
           <p className='pg-transaction-summary-box-inflow'>
-            {inflowSum.toFixed(2)} $
+            {inflowSum.toFixed(2)}{' '}
+            <img
+              src={currencyIconSrc}
+              alt='currency'
+              className='pg-balance-money-icon'
+            />
           </p>
         </div>
         <div className='pg-transaction-summary-box-flow'>
           <p>Outflow</p>
           <p className='pg-transaction-summary-box-outflow'>
-            -{outflowSum.toFixed(2)} $
+            -{outflowSum.toFixed(2)}{' '}
+            <img
+              src={currencyIconSrc}
+              alt='currency'
+              className='pg-balance-money-icon'
+            />
           </p>
         </div>
         <div className='pg-transaction-summary-box-total'>
-          {(inflowSum - outflowSum).toFixed(2)} $
+          {(inflowSum - outflowSum).toFixed(2)}{' '}
+          <img
+            src={currencyIconSrc}
+            alt='currency'
+            className='pg-balance-money-icon'
+          />
         </div>
       </div>
     </div>

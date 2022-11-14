@@ -38,10 +38,18 @@ export interface IncomingWalletInitialState {
   card: number;
 }
 
+export interface IncomingCurrency {
+  unit: string;
+  value: number;
+  iconSrc: string;
+}
+
 export interface IncomingExpenseSliceInitialState {
   expense: any;
   isResetInput: boolean;
   wallet: IncomingWalletInitialState;
+  darkMode: boolean;
+  currency: any;
 }
 
 export interface IncomingExpense {

@@ -23,6 +23,10 @@
       display: flex;
       justify-content: space-between;
       padding: 3px 5px 5px 5px;
+      img {
+        margin-top: 3px;
+        height: 13px;
+      }
 
       .pg-transaction-summary-box-inflow {
         color: $--theme-ui-colors-green;
@@ -38,6 +42,12 @@
       display: flex;
       justify-content: flex-end;
       padding: 3px 5px;
+
+      img {
+        margin-top: 3px;
+        margin-left: 2px;
+        height: 13px;
+      }
     }
   }
 
@@ -55,6 +65,11 @@
       display: flex;
       justify-content: space-between;
       padding: 5px;
+      .pg-transaction-summary-box-money-icon {
+        margin-top: 3px;
+        margin-left: 2px;
+        height: 13px;
+      }
     }
   }
 }

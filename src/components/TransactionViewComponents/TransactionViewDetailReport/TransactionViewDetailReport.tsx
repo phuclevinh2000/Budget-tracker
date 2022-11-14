@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import moment from 'moment';
+import { RootState } from '../../../redux/store';
+import { useSelector } from 'react-redux';
 
 import './TransactionViewDetailReport.scss';
 
@@ -7,6 +9,10 @@ import TransactionViewDetailReportModal from '../TransactionViewDetailReportModa
 
 const TransactionViewDetailReport = ({ singleTransaction }: any) => {
   const [openModal, setOpenModal] = useState(false);
+
+  const currencyIconSrc = useSelector(
+    (state: RootState) => state.expenseData.currency.iconSrc
+  );
   return (
     <div className='pg-transaction-detail-report'>
       <TransactionViewDetailReportModal
@@ -37,7 +43,12 @@ const TransactionViewDetailReport = ({ singleTransaction }: any) => {
         <p
           className={`pg-transaction-expense-report-money ${singleTransaction.category.operation}`}
         >
-          {singleTransaction.amount.value} $
+          {singleTransaction.amount.value}{' '}
+          <img
+            src={currencyIconSrc}
+            alt='currency'
+            className='pg-transaction-expense-expense-money-icon'
+          />
         </p>
       </div>
     </div>

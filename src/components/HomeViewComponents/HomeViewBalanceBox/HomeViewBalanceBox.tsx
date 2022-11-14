@@ -1,13 +1,16 @@
 import { RootState } from '../../../redux/store';
-
-import './HomeViewBalanceBox.scss';
-
 import { useSelector } from 'react-redux';
 import { IncomingExpense } from '../../../types/types';
+
+import './HomeViewBalanceBox.scss';
 
 const HomeViewBalanceBox = () => {
   const myExpenses = useSelector(
     (state: RootState) => state.expenseData.expense
+  );
+
+  const currencyIconSrc = useSelector(
+    (state: RootState) => state.expenseData.currency.iconSrc
   );
 
   const cardExpenses = myExpenses.filter(
@@ -54,7 +57,12 @@ const HomeViewBalanceBox = () => {
               totalCashExpense <= 0 ? 'minus' : 'plus'
             }`}
           >
-            {totalCashExpense.toFixed(2)} $
+            {totalCashExpense.toFixed(2)}{' '}
+            <img
+              src={currencyIconSrc}
+              alt='currency'
+              className='pg-balance-money-icon'
+            />
           </p>
         </div>
         <div className='pg-balance-box-group'>
@@ -71,7 +79,12 @@ const HomeViewBalanceBox = () => {
               totalCardExpense <= 0 ? 'minus' : 'plus'
             }`}
           >
-            {totalCardExpense.toFixed(2)} $
+            {totalCardExpense.toFixed(2)}
+            <img
+              src={currencyIconSrc}
+              alt='currency'
+              className='pg-balance-money-icon'
+            />
           </p>
         </div>
       </div>

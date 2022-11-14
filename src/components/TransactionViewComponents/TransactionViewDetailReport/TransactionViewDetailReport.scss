@@ -17,6 +17,10 @@
 
     .pg-transaction-expense-report-money {
       font-weight: 600;
+
+      .pg-transaction-expense-expense-money-icon {
+        height: 12px;
+      }
     }
 
     .pg-transaction-expense-report-money.minus {

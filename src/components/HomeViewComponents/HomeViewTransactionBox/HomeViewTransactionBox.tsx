@@ -11,6 +11,10 @@ const HomeViewTransactionBox = () => {
     (state: RootState) => state.expenseData.expense
   );
 
+  const currencyIconSrc = useSelector(
+    (state: RootState) => state.expenseData.currency.iconSrc
+  );
+
   return (
     <div className='pg-transaction-box-home'>
       <div className='pg-transaction-box-home-title'>
@@ -40,7 +44,12 @@ const HomeViewTransactionBox = () => {
                 <p
                   className={`pg-transaction-box-home-money ${singleTransaction.category.operation}`}
                 >
-                  {singleTransaction.amount.value} $
+                  {singleTransaction.amount.value}{' '}
+                  <img
+                    src={currencyIconSrc}
+                    alt='currency'
+                    className='pg-transaction-box-money-icon'
+                  />
                 </p>
               </div>
             ))}

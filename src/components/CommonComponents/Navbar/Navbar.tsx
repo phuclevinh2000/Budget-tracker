@@ -12,6 +12,10 @@ const Navbar = () => {
     (state: RootState) => state.expenseData.expense
   );
 
+  const currencyIconSrc = useSelector(
+    (state: RootState) => state.expenseData.currency.iconSrc
+  );
+
   const inflowExpense = myExpenses.filter(
     (expense: IncomingExpense) => expense.category.operation === 'plus'
   );
@@ -41,7 +45,13 @@ const Navbar = () => {
         <div className='pg-navbar-total'>
           <p className='pg-navbar-total-title'>Total</p>
           <p className='pg-navbar-total-calculate'>
-            {hideTotal ? '****' : `${(inflowSum - outflowSum).toFixed(2)} $`}
+            {hideTotal ? '****' : `${(inflowSum - outflowSum).toFixed(2)}`}
+            <img
+              className='pg-navbar-total-calculate-currency-icon'
+              src={currencyIconSrc}
+              alt='global'
+              onClick={() => setHideTotal(!hideTotal)}
+            />
             <img
               className='pg-navbar-total-calculate-see-icon'
               src={`./assets/icons/notifications/notifications-${
