@@ -24,7 +24,7 @@ const HomeViewReportGraph = () => {
   const incomeMoney = myExpenses.reduce(
     (particialSum: number, currentValue: any) => {
       const value =
-        currentValue.category.operation === 'plus'
+        currentValue?.category?.operation === 'plus'
           ? currentValue.amount.value
           : 0;
       return particialSum + value;
